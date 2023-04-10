@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="col-8 my-5 mx-auto bg-dark bg-opacity-25 rounded-3 p-4">
+
+        <form class="row" (ngSubmit)="login()" #loginForm="ngForm">
+            <div class="col-12 mb-3 text-dark">
+                <label class="form-label" for="name"><strong>Usuário</strong></label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="name" 
+                    name="name" 
+                    [(ngModel)]="loginFormModel.nome" #nome="ngModel"
+                />
+            </div>
+            <div class="col-12 mb-3 text-dark">
+                <label class="form-label" for="password"><strong>Senha</strong></label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="password" 
+                    name="password"  
+                    [(ngModel)]="loginFormModel.senha" #senha="ngModel"
+                />
+            </div>
+            <div class="col-12 mb-3 text-dark">
+                <label class="form-label" for="confirmPassword"><strong>Confirme sua senha</strong></label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="confirmPassword" 
+                    name="confirmPassword" 
+                    [(ngModel)]="loginFormModel.confirmaSenha" #confirmaSenha="ngModel"
+                />
+            </div>
+            <div class="col-1 mt-2">
+                <button type="submit" class="btn btn-dark">Entrar</button> 
+            </div>
+        </form>
+
+    </div>
+</div>
+
