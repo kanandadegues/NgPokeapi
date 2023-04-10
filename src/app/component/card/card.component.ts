@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+export interface cardInfo {
+  nome: string;
+  imagem: string;
+}
 
 @Component({
   selector: 'app-card',
@@ -6,5 +11,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-
+  @Input() infos: cardInfo = {
+    nome: '',
+    imagem: ''
+  }
 }
